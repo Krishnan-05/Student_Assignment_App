@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/assignment-list']"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary" class="subtitle"
+      >Submit your Assignment</ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div
+    style="
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+    "
+  >
+    <img
+      src="https://static.vecteezy.com/system/resources/previews/000/134/405/non_2x/laptop-vector-illustration.jpg"
+      height="200"
+      width="100%"
+    />
+    <ion-input
+      id="docinput"
+      (change)="uploadfile($event)"
+      type="file"
+      accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    >
+    </ion-input>
+    <ion-button expand="block" color="primary" (click)="handin()">
+      Hand in
+    </ion-button>
+  </div>
+</ion-content>

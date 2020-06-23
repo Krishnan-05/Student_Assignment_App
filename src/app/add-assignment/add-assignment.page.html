@@ -1,0 +1,55 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="subjectlist"></ion-back-button>
+    </ion-buttons>
+    <ion-title
+      size="small"
+      style="text-align: center;"
+      color="dark"
+      class="title"
+      slot=""
+      >Add Assignment</ion-title
+    >
+    <p
+      (click)="closePage()"
+      slot="end"
+      color="light"
+      style="padding-right: 0.5rem; color: tomato;"
+    >
+      Close
+    </p>
+  </ion-toolbar>
+</ion-header>
+<ion-content no-padding>
+  <div
+    style="
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    "
+  >
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Assignment Title</ion-label>
+        <ion-input [(ngModel)]="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Assignment Description</ion-label>
+        <ion-input [(ngModel)]="description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Start Date</ion-label>
+        <ion-input [(ngModel)]="startDate" type="date"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">End Date</ion-label>
+        <ion-input [(ngModel)]="endDate" type="date"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="custom__button" (click)="addAssignment()">
+      Add Assignment
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/assignment-list']"></ion-back-button>
+    </ion-buttons>
+    <ion-title
+      style="font-weight: bold; letter-spacing: 0.3rem; text-align: center;"
+      >Report</ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img
+    src="https://img.freepik.com/free-vector/illustration-data-analysis_53876-26963.jpg?size=626&ext=jpg"
+  />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{subjectReport.endDate}}</ion-card-subtitle>
+      <ion-card-title>{{subjectReport.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{subjectReport.description}}
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-list-header>
+      <ion-label style="color: seagreen;">Submitted Students</ion-label>
+    </ion-list-header>
+    <p
+      *ngIf="isEmpty; else notEmpty"
+      style="padding: 1rem; text-align: center;"
+    >
+      No students submitted yet!
+    </p>
+    <ng-template #notEmpty>
+      <ion-item
+        style="font-size: 8px;"
+        *ngFor="let student of subjectReport.submittedStudents"
+      >
+        <ion-label>{{student.name}}</ion-label>
+        <ion-label>{{student.date}}</ion-label>
+        <ion-label
+          ><button style="background-color: transparent;">
+            <a href="{{student.fileURL}}" download>download</a>
+          </button></ion-label
+        >
+      </ion-item>
+    </ng-template>
+  </ion-list>
+</ion-content>

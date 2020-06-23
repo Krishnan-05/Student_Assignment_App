@@ -1,0 +1,16 @@
+.btncenter {
+  border-radius: 6px;
+  border: none;
+}
+.regform {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.regform > ion-item {
+  margin-bottom: 1rem;
+}
+
+ion-item {
+  border-radius: 6px;
+}

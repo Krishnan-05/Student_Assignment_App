@@ -1,0 +1,86 @@
+<ion-toolbar>
+  <ion-title
+    style="font-weight: bold; letter-spacing: 0.3rem; text-align: center;"
+    color="dark"
+    class="title"
+    >Sign Up</ion-title
+  >
+</ion-toolbar>
+
+<ion-content>
+  <div
+    class="regform"
+    style="
+      padding: 1rem;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        #6c00ff,
+        #6300f2,
+        #5a00e4,
+        #5100d7,
+        #4800ca,
+        #3d06bb,
+        #330aac,
+        #2a0c9d,
+        #1f0f88,
+        #150f73,
+        #0e0e5e,
+        #0a0c4a
+      );
+    "
+  >
+    <img
+      style="
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        align-self: center;
+      "
+      src="https://img.freepik.com/free-vector/man-use-id-card-sign-up-account-concept_148733-13.jpg?size=338&ext=jpg"
+    />
+    <br />
+    <ion-item>
+      <ion-input
+        placeholder="Enter Username"
+        [(ngModel)]="username"
+        type="name"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        placeholder="Enter Email Address"
+        [(ngModel)]="email"
+        type="email"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        placeholder="Enter Password"
+        [(ngModel)]="password"
+        type="password"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        placeholder="Enter Confirm Password"
+        [(ngModel)]="confirmpassword"
+        type="password"
+      ></ion-input>
+    </ion-item>
+    <ion-button
+      color="light"
+      class="btncenter"
+      expand="block"
+      (click)="submit()"
+      >Get Started</ion-button
+    >
+    <br />
+    <a
+      style="text-align: center; color: white;"
+      routerLink="/"
+      routerDirection="forward"
+      >Already a user ? Login
+    </a>
+  </div>
+</ion-content>

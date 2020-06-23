@@ -1,0 +1,75 @@
+<ion-toolbar>
+  <ion-title
+    style="font-weight: bold; letter-spacing: 0.3rem;"
+    color="dark"
+    class="title"
+    >LOGIN</ion-title
+  >
+</ion-toolbar>
+
+<ion-content>
+  <ion-list
+    class="ilist"
+    style="
+      background-image: linear-gradient(
+        to bottom,
+        #6c00ff,
+        #6300f2,
+        #5a00e4,
+        #5100d7,
+        #4800ca,
+        #3d06bb,
+        #330aac,
+        #2a0c9d,
+        #1f0f88,
+        #150f73,
+        #0e0e5e,
+        #0a0c4a
+      );
+    "
+  >
+    <img
+      style="
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        align-self: center;
+      "
+      src="https://image.freepik.com/free-vector/login-concept-illustration_114360-757.jpg"
+    />
+    <br />
+    <ion-item style="border-radius: 6px;">
+      <ion-icon name="mail-outline" size="small" color="primary"></ion-icon>
+      <ion-input
+        placeholder=" Enter Email Address"
+        [(ngModel)]="email"
+        type="email"
+      ></ion-input>
+    </ion-item>
+    <ion-item style="border-radius: 6px;">
+      <ion-icon name="key-outline" size="small" color="primary"></ion-icon>
+      <ion-input
+        placeholder=" Enter Password"
+        [(ngModel)]="password"
+        type="password"
+      ></ion-input>
+    </ion-item>
+    <ion-button
+      style="border-radius: 6px;"
+      expand="block"
+      color="light"
+      (click)="login()"
+      >Login</ion-button
+    >
+
+    <!-- <ion-button  expand="block"   color="dark" fill="outline" (click)="gotoReg()">Register</ion-button> -->
+    <!-- <p>If You are a New User ? <a routerLink="/register"></a></p> -->
+    <br />
+    <a
+      style="text-align: center; color: white;"
+      routerLink="/register"
+      routerDirection="forward"
+      >Not a user ? Signup
+    </a>
+  </ion-list>
+</ion-content>

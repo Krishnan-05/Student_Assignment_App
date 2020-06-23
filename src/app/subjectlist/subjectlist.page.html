@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="dark">Subject List</ion-title>
+    <a
+      style="padding: 1rem; text-decoration: none; color: red;"
+      slot="end"
+      href="#"
+      (click)="signout()"
+      >Logout</a
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card
+    (click)="changeRouter('Circuit Analysis')"
+    style="
+      background-image: url('https://image.freepik.com/free-vector/digital-circuit-blue-banner-background-with-text-space_1017-22593.jpg');
+      color: white;
+    "
+  >
+    <ion-card-header>
+      <ion-card-title style="color: white;">Circuit Analysis</ion-card-title>
+      <ion-card-subtitle style="color: white;">III Year ECE</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Tutor ABC
+    </ion-card-content>
+  </ion-card>
+  <ion-card
+  (click)="changeRouter('Signals and Systems')"
+    style="
+      background-image: url('https://en.selectra.info/sites/default/files/styles/article_hero/public/banner-providers-telecom_0.png?itok=oYZ6d8Hg');
+      color: white;
+    "
+  >
+    <ion-card-header>
+      <ion-card-title style="color: white;">Signals and Systems</ion-card-title>
+      <ion-card-subtitle style="color: white;">III Year ECE</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Tutor ABC
+    </ion-card-content>
+  </ion-card>
+  <ion-card
+  (click)="changeRouter('Electromagnetic Fields')"
+    style="
+      background-image: url('https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/5024231/600/400/m2/fpnw/wm1/cpfvvnvixrhh8yzxszbrmmy8cj0dtnqhco5fvr1ipbasxwt6aa8ez1twh9jxjtwr-.jpg?1536540013&s=a5abc44012320b25beb8c5dd48b30f0f');
+      background-size: cover;
+      color: white;
+    "
+  >
+    <ion-card-header>
+      <ion-card-title style="color: white;">Electromagnetic Fields</ion-card-title>
+      <ion-card-subtitle style="color: white;">III Year ECE</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Tutor ABC
+    </ion-card-content>
+  </ion-card>
+</ion-content>
