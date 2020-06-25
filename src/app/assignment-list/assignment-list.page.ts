@@ -50,7 +50,6 @@ export class AssignmentListPage implements OnInit {
             (student) => student.id === user.uid
           );
           if (isFound.length >= 1 && assignment !== undefined) {
-            console.log("Is Found", isFound);
             this.submittedAssignments.push(assignment);
           } else {
             this.pendingAssignments.push(assignment);

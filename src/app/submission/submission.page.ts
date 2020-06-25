@@ -96,7 +96,7 @@ export class SubmissionPage implements OnInit {
               this.loadingController.dismiss();
               this.presentToast("File Added Successfully", "success");
               this.router.navigate(["/subjectlist"]);
-              console.log("uploaded!");
+             
             } catch (error) {
               this.loadingController.dismiss();
               this.presentToast(
@@ -113,10 +113,10 @@ export class SubmissionPage implements OnInit {
   }
   async handin() {
     await this.presentAlert();
-    console.log(document.getElementById("file"));
+   
   }
   uploadfile(ev) {
     this.files = ev.target.files[0];
-    console.log(ev.target.files[0]);
+   
   }
 }
